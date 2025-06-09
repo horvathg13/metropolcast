@@ -1,7 +1,7 @@
-import {normalize, removeSpaces} from "strings";
-import {latinize} from "latinize";
-import alpha2s from 'iso-alpha-2.json';
-import alpha3s from 'iso-alpha-3.json';
+import {normalize, removeSpaces} from "./strings";
+import {latinize} from "./latinize";
+import alpha2s from './iso-alpha-2.json';
+import alpha3s from './iso-alpha-3.json';
 import names from './names.json'
 export const countryToAlpha2 = (str: any) : string|null  => {
     // Check it's a string at least 2 chars long
