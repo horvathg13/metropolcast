@@ -331,7 +331,7 @@ function handleKeyUp(){
   }
 }
 
-function setWeatherIcon(query){
+function setWeatherIcon(query, conditionCode=null, isMini=false){
   if(query){
     let getLocalHour = new Date(query.location.localtime).getHours();
     let getLocalMinute = new Date(query.location.localtime).getMinutes();
@@ -340,14 +340,15 @@ function setWeatherIcon(query){
     let getSunRise = Helper.convertTime12to24(query.forecast.forecastday[0].astro.sunrise);
     let getSunSet = Helper.convertTime12to24(query.forecast.forecastday[0].astro.sunset);
 
-    if(finalLocalTime > getSunRise && finalLocalTime < getSunSet){
-      return t(`weather.${query?.current?.condition?.code}.icon-day`)
-    }else{
-      return t(`weather.${query?.current?.condition?.code}.icon-night`)
-    }
-  }else{
-    return t(`weather.0000.icon`);
+    return `${isMini ? 'weather-base mini' : 'weather-base'} weather-icon-${query?.current?.condition?.code}-${finalLocalTime > getSunRise && finalLocalTime < getSunSet ? 'day' : 'night'}`;
+
   }
+  if(conditionCode){
+    return `${isMini ? 'weather-base mini' : 'weather-base'} weather-icon-${conditionCode}-day`;
+  }
+
+  return t(`weather.0000.icon`);
+
 }
 async function filterCities(filterCitiesEn){
   let citiesFromDB = await db.cities
@@ -721,7 +722,7 @@ onMounted(async () => {
           <div class="main-container">
             <div class="base-container big">
               <div class="svg-container">
-                <img :src="setWeatherIcon(weatherData)" />
+                <div :class="setWeatherIcon(weatherData)"></div>
                 <h1 v-if="isCelsius">{{new Intl.NumberFormat(i18next.language).format(weatherData?.current?.temp_c)}} °C</h1>
                 <h1 v-else>{{new Intl.NumberFormat(i18next.language).format(weatherData?.current?.temp_f)}} °F</h1>
               </div>
@@ -734,7 +735,7 @@ onMounted(async () => {
               <div class="card clickable"  v-for="e in weatherData?.forecast?.forecastday">
                 <div class="svg-container " @click="generateChartData(e.date, e.hour)">
                   <h4>{{dateRendering(e.date)}}</h4>
-                  <img :src="t(`weather.${e?.day?.condition?.code}.icon-day`) "/>
+                  <div :class="setWeatherIcon(null, e.day.condition.code, true)"></div>
                   <h1 v-if="isCelsius">{{ new Intl.NumberFormat(i18next.language).format(e.day.avgtemp_c) }} °C</h1>
                   <h1 v-else>{{ new Intl.NumberFormat(i18next.language).format(e.day.avgtemp_f) }} °F</h1>
                   <h5>{{ t(`weather.${e.day.condition?.code}.day`) }}</h5>
