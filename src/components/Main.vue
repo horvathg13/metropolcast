@@ -9,7 +9,7 @@ import Error from "@/components/Error.vue";
 import cities from '../cities.json';
 import admin1 from '../admin1.json';
 import {getBoundsOfDistance, isPointWithinRadius, orderByDistance} from "geolib";
-import {countryToAlpha2} from "../../country-to-iso.js";
+import {countryToAlpha2} from "../../country-to-iso.ts";
 import Chart from "@/components/chart.vue";
 import Cookie from "@/components/Cookie.vue";
 import varosok from "../cities_hu.json"

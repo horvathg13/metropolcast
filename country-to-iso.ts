@@ -1,5 +1,5 @@
-import {normalize, removeSpaces} from "strings.ts";
-import {latinize} from "latinize.ts";
+import {normalize, removeSpaces} from "strings";
+import {latinize} from "latinize";
 import alpha2s from 'iso-alpha-2.json';
 import alpha3s from 'iso-alpha-3.json';
 import names from './names.json'
