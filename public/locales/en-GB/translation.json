@@ -51,343 +51,343 @@
     "0000": {
       "day": "Unknown",
       "night": "Unknown",
-      "icon": "/weather-icons/bom/app/00_missing_data.svg",
+      "icon": "/metropolcast/src/assets/weather-icons/bom/app/00_missing_data.svg",
       "advise": "Something went wrong. Please try again later."
     },
     "1000": {
       "day": "Sunny",
       "night": "Clear",
-      "icon-night": "/weather-icons/animated/clear-night.svg",
-      "icon-day": "/weather-icons/animated/clear-day.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/clear-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/clear-day.svg",
       "advise": "Wear light, breathable clothes. Sunglasses are recommended."
     },
     "1003": {
       "day": "Partly cloudy",
       "night": "Partly cloudy",
-      "icon-night": "/weather-icons/animated/cloudy-3-night.svg",
-      "icon-day": "/weather-icons/animated/cloudy-3-day.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/cloudy-3-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/cloudy-3-day.svg",
       "advise": "A light jacket or sweater may be needed during the night."
     },
     "1006": {
       "day": "Cloudy",
       "night": "Cloudy",
-      "icon-night": "/weather-icons/animated/cloudy-1-night.svg",
-      "icon-day": "/weather-icons/animated/cloudy-1-day.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/cloudy-1-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/cloudy-1-day.svg",
       "advise": "A jacket or sweater is recommended."
     },
     "1009": {
       "day": "Overcast",
       "night": "Overcast",
-      "icon-night": "/weather-icons/animated/cloudy-1-night.svg",
-      "icon-day": "/weather-icons/animated/cloudy.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/cloudy-1-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/cloudy.svg",
       "advise": "Dress warmly, as the weather may feel cooler."
     },
     "1030": {
       "day": "Mist",
       "night": "Mist",
-      "icon-night": "/weather-icons/animated/fog-night.svg",
-      "icon-day": "/weather-icons/animated/fog-day.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/fog-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/fog-day.svg",
       "advise": "Wear a light jacket and be cautious on the roads."
     },
     "1063": {
       "day": "Patchy rain possible",
       "night": "Patchy rain possible",
-      "icon-night": "/weather-icons/animated/rainy-2-night.svg",
-      "icon-day": "/weather-icons/animated/rainy-2.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/rainy-2-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/rainy-2.svg",
       "advise": "Bring an umbrella or raincoat."
     },
     "1066": {
       "day": "Patchy snow possible",
       "night": "Patchy snow possible",
-      "icon-night": "/weather-icons/animated/snowy-2-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-2.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-2-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-2.svg",
       "advise": "Wear warm clothes, gloves, and a hat."
     },
     "1069": {
       "day": "Patchy sleet possible",
       "night": "Patchy sleet possible",
-      "icon-night": "/weather-icons/animated/rain-and-sleet-mix.svg",
-      "icon-day": "/weather-icons/animated/rain-and-sleet-mix.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/rain-and-sleet-mix.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/rain-and-sleet-mix.svg",
       "advise": "Dress warmly and wear waterproof shoes."
     },
     "1072": {
       "day": "Patchy freezing drizzle possible",
       "night": "Patchy freezing drizzle possible",
-      "icon-night": "/weather-icons/animated/hail.svg",
-      "icon-day": "/weather-icons/animated/hail.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/hail.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/hail.svg",
       "advise": "Wear warm, waterproof clothing and footwear."
     },
     "1087": {
       "day": "Thundery outbreaks possible",
       "night": "Thundery outbreaks possible",
-      "icon-night": "/weather-icons/animated/scattered-thunderstorms-night.svg",
-      "icon-day": "/weather-icons/animated/scattered-thunderstorms.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/scattered-thunderstorms-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/scattered-thunderstorms.svg",
       "advise": "Carry an umbrella and stay indoors if possible during a storm."
     },
     "1114": {
       "day": "Blowing snow",
       "night": "Blowing snow",
-      "icon-night": "/weather-icons/animated/snowy-3-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-3.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-3-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-3.svg",
       "advise": "Wear heavy winter clothing, including a hat and gloves."
     },
     "1117": {
       "day": "Blizzard",
       "night": "Blizzard",
-      "icon-night": "/weather-icons/animated/snowy-3-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-3.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-3-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-3.svg",
       "advise": "Wear extremely warm, windproof clothing and avoid outdoor activities."
     },
     "1135": {
       "day": "Fog",
       "night": "Fog",
-      "icon-night": "/weather-icons/animated/fog-night.svg",
-      "icon-day": "/weather-icons/animated/fog.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/fog-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/fog.svg",
       "advise": "Wear light, breathable clothes but be cautious on the roads due to low visibility."
     },
     "1147": {
       "day": "Freezing fog",
       "night": "Freezing fog",
-      "icon-night": "/weather-icons/animated/fog-night.svg",
-      "icon-day": "/weather-icons/animated/fog.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/fog-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/fog.svg",
       "advise": "Dress warmly and watch out for icy roads."
     },
     "1150": {
       "day": "Patchy light drizzle",
       "night": "Patchy light drizzle",
-      "icon-night": "/weather-icons/animated/rainy-1-night.svg",
-      "icon-day": "/weather-icons/animated/rainy-1.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/rainy-1-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/rainy-1.svg",
       "advise": "Bring an umbrella and wear waterproof shoes."
     },
     "1153": {
       "day": "Light drizzle",
       "night": "Light drizzle",
-      "icon-night": "/weather-icons/animated/rainy-1-night.svg",
-      "icon-day": "/weather-icons/animated/rainy-1.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/rainy-1-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/rainy-1.svg",
       "advise": "Carry an umbrella or raincoat."
     },
     "1168": {
       "day": "Freezing drizzle",
       "night": "Freezing drizzle",
-      "icon-night": "/weather-icons/animated/frost-night.svg",
-      "icon-day": "/weather-icons/animated/frost.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/frost-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/frost.svg",
       "advise": "Wear warm clothing and waterproof gear to avoid getting wet and cold."
     },
     "1171": {
       "day": "Heavy freezing drizzle",
       "night": "Heavy freezing drizzle",
-      "icon-night": "/weather-icons/animated/frost-night.svg",
-      "icon-day":  "/weather-icons/animated/frost.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/frost-night.svg",
+      "icon-day":  "/metropolcast/src/assets/weather-icons/animated/frost.svg",
       "advise": "Wear winter clothing, including a waterproof jacket and boots."
     },
     "1180": {
       "day": "Patchy light rain",
       "night": "Patchy light rain",
-      "icon-night":  "/weather-icons/animated/rainy-2-night.svg",
-      "icon-day":  "/weather-icons/animated/rainy-2.svg",
+      "icon-night":  "/metropolcast/src/assets/weather-icons/animated/rainy-2-night.svg",
+      "icon-day":  "/metropolcast/src/assets/weather-icons/animated/rainy-2.svg",
       "advise": "Bring an umbrella or raincoat."
     },
     "1183": {
       "day": "Light rain",
       "night": "Light rain",
-      "icon-night":  "/weather-icons/animated/rainy-1-night.svg",
-      "icon-day":  "/weather-icons/animated/rainy-1.svg",
+      "icon-night":  "/metropolcast/src/assets/weather-icons/animated/rainy-1-night.svg",
+      "icon-day":  "/metropolcast/src/assets/weather-icons/animated/rainy-1.svg",
       "advise": "Wear a light jacket and bring an umbrella."
     },
     "1186": {
       "day": "Moderate rain at times",
       "night": "Moderate rain at times",
-      "icon-night":  "/weather-icons/animated/rainy-2-night.svg",
-      "icon-day":  "/weather-icons/animated/rainy-2.svg",
+      "icon-night":  "/metropolcast/src/assets/weather-icons/animated/rainy-2-night.svg",
+      "icon-day":  "/metropolcast/src/assets/weather-icons/animated/rainy-2.svg",
       "advise": "Dress appropriately for rain and carry an umbrella."
     },
     "1189": {
       "day": "Moderate rain",
       "night": "Moderate rain",
-      "icon-night":  "/weather-icons/animated/rainy-2-night.svg",
-      "icon-day":  "/weather-icons/animated/rainy-2.svg",
+      "icon-night":  "/metropolcast/src/assets/weather-icons/animated/rainy-2-night.svg",
+      "icon-day":  "/metropolcast/src/assets/weather-icons/animated/rainy-2.svg",
       "advise": "Wear waterproof clothing and carry an umbrella."
     },
     "1192": {
       "day": "Heavy rain at times",
       "night": "Heavy rain at times",
-      "icon-night":  "/weather-icons/animated/rainy-3-night.svg",
-      "icon-day":  "/weather-icons/animated/rainy-3.svg",
+      "icon-night":  "/metropolcast/src/assets/weather-icons/animated/rainy-3-night.svg",
+      "icon-day":  "/metropolcast/src/assets/weather-icons/animated/rainy-3.svg",
       "advise": "Bring a waterproof jacket and umbrella, and be cautious of flooding."
     },
     "1195": {
       "day": "Heavy rain",
       "night": "Heavy rain",
-      "icon-night":  "/weather-icons/animated/rainy-3-night.svg",
-      "icon-day":  "/weather-icons/animated/rainy-3.svg",
+      "icon-night":  "/metropolcast/src/assets/weather-icons/animated/rainy-3-night.svg",
+      "icon-day":  "/metropolcast/src/assets/weather-icons/animated/rainy-3.svg",
       "advise": "Wear a waterproof jacket and boots, and avoid outdoor activities if possible."
     },
     "1198": {
       "day": "Light freezing rain",
       "night": "Light freezing rain",
-      "icon-night":  "/weather-icons/animated/snow-and-sleet-mix.svg",
-      "icon-day":  "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-night":  "/metropolcast/src/assets/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-day":  "/metropolcast/src/assets/weather-icons/animated/snow-and-sleet-mix.svg",
       "advise": "Wear warm clothing and be cautious of icy surfaces."
     },
     "1201": {
       "day": "Moderate or heavy freezing rain",
       "night": "Moderate or heavy freezing rain",
-      "icon-night":  "/weather-icons/animated/snow-and-sleet-mix.svg",
-      "icon-day":  "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-night":  "/metropolcast/src/assets/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-day":  "/metropolcast/src/assets/weather-icons/animated/snow-and-sleet-mix.svg",
       "advise": "Wear insulated, waterproof clothing and boots to stay safe."
     },
     "1204": {
       "day": "Light sleet",
       "night": "Light sleet",
-      "icon-night": "/weather-icons/animated/snow-and-sleet-mix.svg",
-      "icon-day": "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snow-and-sleet-mix.svg",
       "advise": "Wear warm clothes and waterproof shoes."
     },
     "1207": {
       "day": "Moderate or heavy sleet",
       "night": "Moderate or heavy sleet",
-      "icon-night": "/weather-icons/animated/snow-and-sleet-mix.svg",
-      "icon-day": "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snow-and-sleet-mix.svg",
       "advise": "Wear heavy winter clothing and waterproof boots."
     },
     "1210": {
       "day": "Patchy light snow",
       "night": "Patchy light snow",
-      "icon-night": "/weather-icons/animated/snowy-1-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-1.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-1-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-1.svg",
       "advise": "Dress warmly and wear boots to avoid slipping."
     },
     "1213": {
       "day": "Light snow",
       "night": "Light snow",
-      "icon-night": "/weather-icons/animated/snowy-1-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-1.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-1-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-1.svg",
       "advise": "Wear a warm coat, gloves, and boots."
     },
     "1216": {
       "day": "Patchy moderate snow",
       "night": "Patchy moderate snow",
-      "icon-night": "/weather-icons/animated/snowy-2-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-2.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-2-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-2.svg",
       "advise": "Dress warmly, with layers and snow boots."
     },
     "1219": {
       "day": "Moderate snow",
       "night": "Moderate snow",
-      "icon-night": "/weather-icons/animated/snowy-2-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-2.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-2-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-2.svg",
       "advise": "Wear a heavy winter coat and boots. Gloves and a scarf are also recommended."
     },
     "1222": {
       "day": "Patchy heavy snow",
       "night": "Patchy heavy snow",
-      "icon-night": "/weather-icons/animated/snowy-3-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-3.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-3-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-3.svg",
       "advise": "Wear heavy winter clothing and be prepared for possible snow accumulation."
     },
     "1225": {
       "day": "Heavy snow",
       "night": "Heavy snow",
-      "icon-night": "/weather-icons/animated/snowy-3-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-3.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-3-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-3.svg",
       "advise": "Dress warmly in layers and wear snow boots."
     },
     "1237": {
       "day": "Ice pellets",
       "night": "Ice pellets",
-      "icon-night": "/weather-icons/animated/hail.svg",
-      "icon-day": "/weather-icons/animated/hail.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/hail.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/hail.svg",
       "advise": "Wear a warm jacket, gloves, and waterproof boots to stay dry and comfortable."
     },
     "1240": {
       "day": "Light rain shower",
       "night": "Light rain shower",
-      "icon-night": "/weather-icons/animated/rainy-1-night.svg",
-      "icon-day": "/weather-icons/animated/rainy-1.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/rainy-1-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/rainy-1.svg",
       "advise": "Wear a raincoat or carry an umbrella."
     },
     "1243": {
       "day": "Moderate or heavy rain shower",
       "night": "Moderate or heavy rain shower",
-      "icon-night": "/weather-icons/animated/rainy-2-night.svg",
-      "icon-day": "/weather-icons/animated/rainy-2.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/rainy-2-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/rainy-2.svg",
       "advise": "Bring a waterproof jacket and boots."
     },
     "1246": {
       "day": "Torrential rain shower",
       "night": "Torrential rain shower",
-      "icon-night": "/weather-icons/animated/rainy-3-night.svg",
-      "icon-day": "/weather-icons/animated/rainy-3.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/rainy-3-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/rainy-3.svg",
       "advise": "Wear waterproof clothing and footwear, and be cautious of flooding."
     },
     "1249": {
       "day": "Light sleet showers",
       "night": "Light sleet showers",
-      "icon-night": "/weather-icons/animated/rain-and-sleet-mix.svg",
-      "icon-day": "/weather-icons/animated/rain-and-sleet-mix.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/rain-and-sleet-mix.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/rain-and-sleet-mix.svg",
       "advise": "Dress warmly and wear waterproof shoes."
     },
     "1252": {
       "day": "Moderate or heavy sleet showers",
       "night": "Moderate or heavy sleet showers",
-      "icon-night": "/weather-icons/animated/rain-and-sleet-mix.svg",
-      "icon-day": "/weather-icons/animated/rain-and-sleet-mix.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/rain-and-sleet-mix.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/rain-and-sleet-mix.svg",
       "advise": "Wear heavy winter clothing and waterproof boots."
     },
     "1255": {
       "day": "Light snow showers",
       "night": "Light snow showers",
-      "icon-night": "/weather-icons/animated/snowy-1-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-1.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-1-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-1.svg",
       "advise": "Wear warm clothing, including a coat, gloves, and boots."
     },
     "1258": {
       "day": "Moderate or heavy snow showers",
       "night": "Moderate or heavy snow showers",
-      "icon-night": "/weather-icons/animated/snowy-2-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-2.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-2-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-2.svg",
       "advise": "Dress warmly in layers and wear snow boots."
     },
     "1261": {
       "day": "Light showers of ice pellets",
       "night": "Light showers of ice pellets",
-      "icon-night": "/weather-icons/animated/hail.svg",
-      "icon-day": "/weather-icons/animated/hail.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/hail.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/hail.svg",
       "advise": "Dress warmly and wear waterproof footwear."
     },
     "1264": {
       "day": "Moderate or heavy showers of ice pellets",
       "night": "Moderate or heavy showers of ice pellets",
-      "icon-night": "/weather-icons/animated/hail.svg",
-      "icon-day": "/weather-icons/animated/hail.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/hail.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/hail.svg",
       "advise": "Wear winter clothing and waterproof boots."
     },
     "1273": {
       "day": "Patchy light rain with thunder",
       "night": "Patchy light rain with thunder",
-      "icon-night": "/weather-icons/animated/scattered-thunderstorms-night.svg",
-      "icon-day": "/weather-icons/animated/scattered-thunderstorms.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/scattered-thunderstorms-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/scattered-thunderstorms.svg",
       "advise": "Carry an umbrella and avoid outdoor activities during the storm."
     },
     "1276": {
       "day": "Moderate or heavy rain with thunder",
       "night": "Moderate or heavy rain with thunder",
-      "icon-night": "/weather-icons/animated/scattered-thunderstorms-night.svg",
-      "icon-day": "/weather-icons/animated/scattered-thunderstorms.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/scattered-thunderstorms-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/scattered-thunderstorms.svg",
       "advise": "Seek shelter indoors and avoid being outside during thunderstorms."
     },
     "1279": {
       "day": "Patchy light snow with thunder",
       "night": "Patchy light snow with thunder",
-      "icon-night": "/weather-icons/animated/snowy-1-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-1.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-1-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-1.svg",
       "advise": "Dress warmly and stay indoors during thunderstorms."
     },
     "1282":{
       "day": "Moderate or heavy snow with thunder",
       "night": "Moderate or heavy snow with thunder",
-      "icon-night": "/weather-icons/animated/snowy-3-night.svg",
-      "icon-day": "/weather-icons/animated/snowy-3.svg",
+      "icon-night": "/metropolcast/src/assets/weather-icons/animated/snowy-3-night.svg",
+      "icon-day": "/metropolcast/src/assets/weather-icons/animated/snowy-3.svg",
       "advise": "Wear heavy winter clothing and avoid being outside during snowstorms."
     }
   }

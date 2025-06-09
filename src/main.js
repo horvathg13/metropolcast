@@ -23,7 +23,7 @@ i18next
         fallbackLng:'hu-HU',
         ns:"translation",
         backend: {
-            loadPath:'/locales/{{lng}}/translation.json',
+            loadPath:'/metropolcast/locales/{{lng}}/translation.json',
         },
         initImmediate:true,
     })
