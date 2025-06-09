@@ -1,0 +1,394 @@
+{
+  "select": {
+    "lang": "Válasszon nyelvet"
+  },
+  "enums": {
+    "eng": "Angol",
+    "hun": "Magyar",
+    "flike": "Hőérzet",
+    "cloud": "Felhőzet",
+    "percip": "Csapadék",
+    "wind": "Szél",
+    "cities-near": "Városok {{city}} közelében",
+    "favorite": "Kedvencek",
+    "unknown": "Ismeretlen",
+    "today": "Ma",
+    "placeholder": "Kezdjen el gépelni...",
+    "loading": "Az adatok töltődnek..."
+  },
+  "chart": {
+    "t": "Idő",
+    "tempC": "Hőmérséklet (°C)",
+    "tempF": "Hőmérséklet (°F)",
+    "wind-kph": "Szél (km/h)",
+    "wind-mph": "Szél (m/h)",
+    "rain-mm": "Eső (mm)",
+    "rain-in": "Eső (in)",
+    "chance": "Valószíűség (%)",
+    "snow-mm": "Hó (mm)",
+    "forecast": "Előrejelzés"
+  },
+  "cookies": {
+    "info": "A weboldal kizárólag statisztikai, analitikai sütit használ. Kérel fogadd el.",
+    "accept": "Elfogad",
+    "reject": "Elutasít"
+  },
+  "app-error": {
+    "1002": "Az API-kulcs megadása kötelező.",
+    "1003": "Kérlek, adj meg egy várost vagy helyet.",
+    "1005": "Hiba történt a kérés során. Próbáld újra.",
+    "1006": "Nem található ilyen hely. Próbáld meg másként.",
+    "2006": "Hiba történt. Próbáld újra később.",
+    "2007": "A napi lekérdezési keret betelt. Próbáld meg később újra.",
+    "2008": "Hiba történt. Próbáld újra később.",
+    "2009": "Hiba történt. Próbáld újra később.",
+    "9000": "Hiba történt a feldolgozás során. Próbáld újra később.",
+    "9001": "Túl sok helyet adtál meg egyszerre. Próbáld kevesebbel újra.",
+    "9999": "Hiba történt. Próbáld újra később.",
+    "0": "Szerverhiba: Hiányos adatok"
+  },
+  "weather":{
+    "0000": {
+      "day": "Ismeretlen",
+      "night": "Ismeretlen",
+      "icon": "/weather-icons/bom/app/00_missing_data.svg",
+      "advise": "Hiba történt. Kérjük próbálja újra később."
+    },
+    "1000": {
+      "day" : "Napos",
+      "night" : "Tiszta",
+      "icon-day": "/weather-icons/animated/clear-day.svg",
+      "icon-night": "/weather-icons/animated/clear-night.svg",
+      "advise":"Viselj könnyű, világos ruhákat és napszemüveget."
+    },
+    "1003": {
+      "day" : "Részben felhős",
+      "night" : "Részben felhős",
+      "icon-day": "/weather-icons/animated/cloudy-3-day.svg",
+      "icon-night": "/weather-icons/animated/cloudy-3-night.svg",
+      "advise":"Kellemes idő. Egy könnyű dzseki vagy pulóver jól jöhet, ha szeles az idő."
+    },
+    "1006": {
+      "day" : "Felhős",
+      "night" : "Felhős",
+      "icon-day": "/weather-icons/animated/cloudy-1-day.svg",
+      "icon-night": "/weather-icons/animated/cloudy-1-night.svg",
+      "advise":"Réteges öltözködés ajánlott. Lehet, hogy hűvös lesz napközben."
+    },
+    "1009": {
+      "day" : "Borult",
+      "night" : "Borult",
+      "icon-day": "/weather-icons/animated/cloudy.svg",
+      "icon-night": "/weather-icons/animated/cloudy-1-night.svg",
+      "advise":"Sötét, hűvös idő. Vigyél magaddal kabátot vagy meleg pulóvert."
+    },
+    "1030": {
+      "day" : "Pára",
+      "night" : "Pára",
+      "icon-day": "/weather-icons/animated/fog-day.svg",
+      "icon-night": "/weather-icons/animated/fog-night.svg",
+      "advise":"Légy látható! Viselj élénk színű vagy fényvisszaverő ruházatot."
+    },
+    "1063": {
+      "day" : "Helyenként eső lehetséges",
+      "night" : "Helyenként eső lehetséges",
+      "icon-day": "/weather-icons/animated/rainy-2-day.svg",
+      "icon-night": "/weather-icons/animated/rainy-2-night.svg",
+      "advise":"Tarts kéznél egy esernyőt vagy esőkabátot – jobb félni, mint megázni."
+    },
+    "1066": {
+      "day" : "Helyenként hó lehetséges",
+      "night" : "Patchy snow possible",
+      "icon-day": "/weather-icons/animated/snowy-2-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-2-night.svg",
+      "advise":"Öltözz rétegesen és vízállóan. Meleg cipő és sapka ajánlott."
+    },
+    "1069": {
+      "day" : "Helyenként ónos eső lehetséges",
+      "night" : "Helyenként ónos eső lehetséges",
+      "icon-day": "/weather-icons/animated/rain-and-sleet-mix.svg",
+      "icon-night": "/weather-icons/animated/rain-and-sleet-mix.svg",
+      "advise":"Csúszós utak! Viselj csúszásmentes talpú cipőt és meleg kabátot."
+    },
+    "1072": {
+      "day" : "Helyenként fagyos szitálás lehetséges",
+      "night" : "Helyenként fagyos szitálás lehetséges",
+      "icon-day": "/weather-icons/animated/hail.svg",
+      "icon-night": "/weather-icons/animated/hail.svg",
+      "advise":"Vízálló kabát, meleg sapka és sál ajánlott. Óvatosan közlekedj!"
+    },
+    "1087": {
+      "day" : "Zivatarok előfordulhatnak",
+      "night" : "Thundery outbreaks possible",
+      "icon-day": "/weather-icons/animated/scattered-thunderstorms-day.svg",
+      "icon-night": "/weather-icons/animated/scattered-thunderstorms-night.svg",
+      "advise":"Kerüld a nyílt tereket. Viselj zárt cipőt és vigyél esernyőt."
+    },
+    "1114": {
+      "day" : "Hófúvás",
+      "night" : "Hófúvás",
+      "icon-day": "/weather-icons/animated/snowy-3-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-3-night.svg",
+      "advise":"Zárt, víz- és szélálló öltözék szükséges, arcot is védő sapkával."
+    },
+    "1117": {
+      "day" : "Hóvihar",
+      "night" : "Hóvihar",
+      "icon-day": "/weather-icons/animated/snowy-3-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-3-night.svg",
+      "advise":"Kerüld a kinti tartózkodást! Ha muszáj kimenned, teljesen zárt, meleg ruházat kell."
+    },
+    "1135": {
+      "day" : "Köd",
+      "night" : "Köd",
+      "icon-day": "/weather-icons/animated/fog-day.svg",
+      "icon-night": "/weather-icons/animated/fog-night.svg",
+      "advise":"Viselj élénk vagy fényvisszaverő ruhát, és rétegesen öltözz."
+    },
+    "1147": {
+      "day" : "Fagyos köd",
+      "night" : "Fagyos köd",
+      "icon-day": "/weather-icons/animated/fog-day.svg",
+      "icon-night": "/weather-icons/animated/fog-night.svg",
+      "advise":"Csúszásmentes cipő és meleg, vízálló ruházat ajánlott."
+    },
+    "1150": {
+      "day" : "Helyenként gyenge szitálás",
+      "night" : "Helyenként gyenge szitálás",
+      "icon-day": "/weather-icons/animated/rainy-1-day.svg",
+      "icon-night": "/weather-icons/animated/rainy-1-night.svg",
+      "advise":"Vékony esőkabát vagy vízlepergető dzseki jól jöhet."
+    },
+    "1153": {
+      "day" : "Gyenge szitálás",
+      "night" : "Gyenge szitálás",
+      "icon-day": "/weather-icons/animated/rainy-1-day.svg",
+      "icon-night": "/weather-icons/animated/rainy-1-night.svg",
+      "advise":"Vízlepergető ruházat ajánlott – esernyő nem feltétlenül szükséges."
+    },
+    "1168": {
+      "day" : "Fagyos szitálás",
+      "night" : "Fagyos szitálás",
+      "icon-day": "/weather-icons/animated/frost-day.svg",
+      "icon-night": "/weather-icons/animated/frost-night.svg",
+      "advise":"Fagy ellen meleg kabát, csúszásmentes cipő és sapka szükséges."
+    },
+    "1171": {
+      "day" : "Erős fagyos szitálás",
+      "night" : "Erős fagyos szitálás",
+      "icon-day": "/weather-icons/animated/frost-day.svg",
+      "icon-night": "/weather-icons/animated/frost-night.svg",
+      "advise":"Veszélyes közlekedés, vastag, vízálló kabát és biztonságos cipő kötelező."
+    },
+    "1180": {
+      "day" : "Helyenként gyenge eső",
+      "night" : "Helyenként gyenge eső",
+      "icon-day":  "/weather-icons/animated/rainy-2-day.svg",
+      "icon-night":  "/weather-icons/animated/rainy-2-night.svg",
+      "advise":"Esernyő vagy könnyű esőkabát jól jöhet."
+    },
+    "1183": {
+      "day" : "Gyenge eső",
+      "night" : "Gyenge eső",
+      "icon-day":  "/weather-icons/animated/rainy-1-day.svg",
+      "icon-night":  "/weather-icons/animated/rainy-1-night.svg",
+      "advise":"Esernyő vagy vízlepergető kabát ajánlott."
+    },
+    "1186": {
+      "day" : "Néhol közepes eső",
+      "night" : "Néhol közepes eső",
+      "icon-day":  "/weather-icons/animated/rainy-2-day.svg",
+      "icon-night":  "/weather-icons/animated/rainy-2-night.svg",
+      "advise":"Esőkabát és vízálló cipő erősen ajánlott."
+    },
+    "1189": {
+      "day" : "Közepes eső",
+      "night" : "Közepes eső",
+      "icon-day":  "/weather-icons/animated/rainy-2-day.svg",
+      "icon-night":  "/weather-icons/animated/rainy-2-night.svg",
+      "advise":"Teljes esővédelmet igényel – kabát, csizma, esernyő."
+    },
+    "1192": {
+      "day" : "Néhol heves eső",
+      "night" : "Néhol heves eső",
+      "icon-day":  "/weather-icons/animated/rainy-3-day.svg",
+      "icon-night":  "/weather-icons/animated/rainy-3-night.svg",
+      "advise":"Kerüld a hosszú szabadban tartózkodást. Teljes esőöltözék szükséges."
+    },
+    "1195": {
+      "day" : "Heves eső",
+      "night" : "Heves eső",
+      "icon-day":  "/weather-icons/animated/rainy-3-day.svg",
+      "icon-night":  "/weather-icons/animated/rainy-3-night.svg",
+      "advise":"Esőkabát, csizma, vízálló táska. Lehetőleg ne tartózkodj sokat kint."
+    },
+    "1198": {
+      "day" : "Gyenge fagyos eső",
+      "night" : "Gyenge fagyos eső",
+      "icon-day":  "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-night":  "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "advise":"Csúszásmentes cipő és meleg, vízálló öltözet elengedhetetlen."
+    },
+    "1201": {
+      "day" : "Közepes vagy heves fagyos eső",
+      "night" : "Közepes vagy heves fagyos eső",
+      "icon-day":  "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-night":  "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "advise":"Nagyon csúszós! Maradj bent, ha lehet. Kint zárt, vastag, vízálló ruha szükséges."
+    },
+    "1204": {
+      "day" : "Gyenge havas eső",
+      "night" : "Gyenge havas eső",
+      "icon-day": "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-night": "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "advise":"Vízálló kabát, sapka és meleg cipő ajánlott."
+    },
+    "1207": {
+      "day" : "Közepes vagy erős havas eső",
+      "night" : "Közepes vagy erős havas eső",
+      "icon-day": "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "icon-night": "/weather-icons/animated/snow-and-sleet-mix.svg",
+      "advise":"Réteges és vízálló öltözködés szükséges, különösen a lábakra."
+    },
+    "1210": {
+      "day" : "Helyenként gyenge havazás",
+      "night" : "Helyenként gyenge havazás",
+      "icon-day": "/weather-icons/animated/snowy-1-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-1-night.svg",
+      "advise":"Meleg ruha, sapka, sál ajánlott, de nem szükséges túl vastag öltözet."
+    },
+    "1213": {
+      "day" : "Gyenge havazás",
+      "night" : "Gyenge havazás",
+      "icon-day": "/weather-icons/animated/snowy-1-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-1-night.svg",
+      "advise":"Sapka, kesztyű, meleg kabát és csúszásmentes cipő ajánlott."
+    },
+    "1216": {
+      "day" : "Helyenként közepes havazás",
+      "night" : "Helyenként közepes havazás",
+      "icon-day": "/weather-icons/animated/snowy-2-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-2-night.svg",
+      "advise":"Téli kabát és meleg cipő szükséges. Óvatosan közlekedj!"
+    },
+    "1219": {
+      "day" : "Közepes havazás",
+      "night" : "Közepes havazás",
+      "icon-day": "/weather-icons/animated/snowy-2-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-2-night.svg",
+      "advise":"Réteges téli öltözék szükséges. Készülj fel csúszós utakra."
+    },
+    "1222": {
+      "day" : "Helyenként erős havazás",
+      "night" : "Helyenként erős havazás",
+      "icon-day": "/weather-icons/animated/snowy-3-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-3-night.svg",
+      "advise":"Teljes téli öltözet és biztonságos cipő szükséges. Ne vezess, ha nem muszáj."
+    },
+    "1225": {
+      "day" : "Erős havazás",
+      "night" : "Erős havazás",
+      "icon-day": "/weather-icons/animated/snowy-3-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-3-night.svg",
+      "advise":"Kerüld a kinti tartózkodást, ha lehet. Meleg, vízálló téli ruházat szükséges."
+    },
+    "1237": {
+      "day" : "Jégdarák",
+      "night" : "Jégdarák",
+      "icon-day": "/weather-icons/animated/hail.svg",
+      "icon-night": "/weather-icons/animated/hail.svg",
+      "advise":"Sisak nem ártana, de elég a vastag kabát és csuklya. Óvatosan közlekedj!"
+    },
+    "1240": {
+      "day" : "Gyenge zápor",
+      "night" : "Gyenge zápor",
+      "icon-day": "/weather-icons/animated/rainy-1-day.svg",
+      "icon-night": "/weather-icons/animated/rainy-1-night.svg",
+      "advise":"Könnyű esőkabát vagy esernyő jól jön rövid utakhoz."
+    },
+    "1243": {
+      "day" : "Közepes vagy heves zápor",
+      "night" : "Közepes vagy heves zápor",
+      "icon-day": "/weather-icons/animated/rainy-2-day.svg",
+      "icon-night": "/weather-icons/animated/rainy-2-night.svg",
+      "advise":"Teljes esőöltözet ajánlott, gyorsan elázhatsz."
+    },
+    "1246": {
+      "day" : "Felzúduló eső",
+      "night" : "Felzúduló eső",
+      "icon-day": "/weather-icons/animated/rainy-3-day.svg",
+      "icon-night": "/weather-icons/animated/rainy-3-night.svg",
+      "advise":"Lehetőleg ne menj ki! Ha muszáj, teljes vízálló öltözet kötelező."
+    },
+    "1249": {
+      "day" : "Gyenge havas eső zápor",
+      "night" : "Gyenge havas eső zápor",
+      "icon-day": "/weather-icons/animated/rain-and-sleet-mix.svg",
+      "icon-night": "/weather-icons/animated/rain-and-sleet-mix.svg",
+      "advise":"Vízálló dzseki és csúszásmentes cipő ajánlott."
+    },
+    "1252": {
+      "day" : "Közepes vagy erős havas eső zápor",
+      "night" : "Közepes vagy erős havas eső zápor",
+      "icon-day": "/weather-icons/animated/rain-and-sleet-mix.svg",
+      "icon-night": "/weather-icons/animated/rain-and-sleet-mix.svg",
+      "advise":"Csak teljes esőkabátban menj ki. Hideg, nedves idő!"
+    },
+    "1255": {
+      "day" : "Gyenge hózápor",
+      "night" : "Gyenge hózápor",
+      "icon-day": "/weather-icons/animated/snowy-1-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-1-night.svg",
+      "advise":"Kényelmes téli öltözék ajánlott. Sapka, sál, kesztyű javasolt."
+    },
+    "1258": {
+      "day" : "Közepes vagy erős hózápor",
+      "night" : "Közepes vagy erős hózápor",
+      "icon-day": "/weather-icons/animated/snowy-2-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-2-night.svg",
+      "advise":"Teljes téli öltözet és jó cipő kell, lehetőleg vízálló."
+    },
+    "1261": {
+      "day" : "Gyenge jégdara zápor",
+      "night" : "Gyenge jégdara zápor",
+      "icon-day": "/weather-icons/animated/hail.svg",
+      "icon-night": "/weather-icons/animated/hail.svg",
+      "advise":"Gyenge jégdara zápor"
+    },
+    "1264": {
+      "day" : "Közepes vagy erős jégdara zápor",
+      "night" : "Közepes vagy erős jégdara zápor",
+      "icon-day": "/weather-icons/animated/hail.svg",
+      "icon-night": "/weather-icons/animated/hail.svg",
+      "advise":"Kerüld a kültéri tartózkodást. Ha muszáj, vastag, erős kabát kell."
+    },
+    "1273": {
+      "day" : "Helyenként gyenge eső mennydörgéssel",
+      "night" : "Helyenként gyenge eső mennydörgéssel",
+      "icon-day": "/weather-icons/animated/scattered-thunderstorms-day.svg",
+      "icon-night": "/weather-icons/animated/scattered-thunderstorms-night.svg",
+      "advise":"Esőkabát és zárt cipő ajánlott. Kerüld a nyílt tereket!"
+    },
+    "1276": {
+      "day" : "Közepes vagy heves eső mennydörgéssel",
+      "night" : "Közepes vagy heves eső mennydörgéssel",
+      "icon-day": "/weather-icons/animated/scattered-thunderstorms-day.svg",
+      "icon-night": "/weather-icons/animated/scattered-thunderstorms-night.svg",
+      "advise":"Maradj bent, ha lehet. Teljes esővédő felszerelés szükséges."
+    },
+    "1279": {
+      "day" : "Helyenként gyenge hó mennydörgéssel",
+      "night" : "Helyenként gyenge hó mennydörgéssel",
+      "icon-day": "/weather-icons/animated/snowy-1-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-1-night.svg",
+      "advise":"Téli ruházat és fokozott óvatosság szükséges – szokatlan időjárás."
+    },
+    "1282":{
+      "day" : "Közepes vagy erős hó mennydörgéssel",
+      "night" : "Közepes vagy erős hó mennydörgéssel",
+      "icon-day": "/weather-icons/animated/snowy-3-day.svg",
+      "icon-night": "/weather-icons/animated/snowy-3-night.svg",
+      "advise":"Viharos hóesés. Teljes téli védelem – ha lehet, maradj bent."
+    }
+  }
+}
