@@ -678,6 +678,46 @@ input:checked + .slider:before {
     height: 100%;
     padding: 15px;
     display: flex;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 870px) {
+    .cookie-popup{
+        height: 25% !important;
+        text-align: center;
+    }
+    .cookie-popup .cookie-content-main{
+        display: grid;
+        margin: 0 auto;
+        align-content: center;
+        align-items: center;
+    }
+    .cookie-popup .cookie-content-main .cookie-content{
+        width: 90% !important;
+        min-width: 350px;
+        height: fit-content;
+        margin-bottom: 20px !important;
+    }
+    .cookie-popup .cookie-content-main .cookie-action-container{
+        width: 90% !important;
+        min-width: 350px !important;
+        padding: 0 !important;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .cookie-popup .cookie-content-main .cookie-action-container .cookie-button{
+        width: 70% !important;
+    }
+    .cookie-popup .cookie-content-main .cookie-action-container .cookie-button.reject{
+        width: 20% !important;
+    }
+}
+@media screen and (max-width: 500px) {
+    .cookie-popup{
+        text-align: left;
+    }
+    .cookie-popup .cookie-content-main .cookie-action-container{
+        margin: 0 !important;
+    }
 }
 .cookie-popup .cookie-content{
     width: 70%;
@@ -686,7 +726,7 @@ input:checked + .slider:before {
 }
 .cookie-popup .cookie-content-main .cookie-action-container{
     width: 30%;
-    padding: 25px;
+    padding: 0 25px;
     display: flex;
 }
 .cookie-popup .cookie-content-main .cookie-action-container .cookie-button{
@@ -700,7 +740,7 @@ input:checked + .slider:before {
     font-size: 15px;
     letter-spacing: .5px;
     transition: .2s ease-in-out;
-    margin: 0 auto;
+    margin: 0 10px;
 }
 .cookie-popup .cookie-content-main .cookie-action-container .cookie-button.reject{
     width: 90px;
@@ -782,3 +822,101 @@ input:checked + .slider:before {
         transform: rotate(-360deg);
     }
 }
+
+.weather-base{width:250px; height:200px;background-position: center; background-repeat: no-repeat; background-size: 100%; margin: 0 auto;}
+.weather-base.mini{width:100px; height:100px;background-position: center; background-repeat: no-repeat; background-size: 100%; margin: 0 auto;}
+.weather-base.weather-icon-0000{background-image:url("./src/assets/weather-icons/bom/app/00_missing_data.svg");}
+.weather-base.weather-icon-1000-night{background-image:url("./src/assets/weather-icons/animated/clear-night.svg");}
+.weather-base.weather-icon-1000-day{background-image:url("./src/assets/weather-icons/animated/clear-day.svg");}
+.weather-base.weather-icon-1003-night{background-image:url("./src/assets/weather-icons/animated/cloudy-3-night.svg");}
+.weather-base.weather-icon-1003-day{background-image:url("./src/assets/weather-icons/animated/cloudy-3-day.svg");}
+.weather-base.weather-icon-1006-night{background-image:url("./src/assets/weather-icons/animated/cloudy-1-night.svg");}
+.weather-base.weather-icon-1006-day{background-image:url("./src/assets/weather-icons/animated/cloudy-1-day.svg");}
+.weather-base.weather-icon-1009-night{background-image:url("./src/assets/weather-icons/animated/cloudy.svg");}
+.weather-base.weather-icon-1009-day{background-image:url("./src/assets/weather-icons/animated/cloudy-1-day.svg");}
+.weather-base.weather-icon-1030-night{background-image:url("./src/assets/weather-icons/animated/fog-night.svg");}
+.weather-base.weather-icon-1030-day{background-image:url("./src/assets/weather-icons/animated/fog-day.svg");}
+.weather-base.weather-icon-1063-night{background-image:url("./src/assets/weather-icons/animated/rainy-2-night.svg");}
+.weather-base.weather-icon-1063-day{background-image:url("./src/assets/weather-icons/animated/rainy-2-day.svg");}
+.weather-base.weather-icon-1066-night{background-image:url("./src/assets/weather-icons/animated/snowy-2-night.svg");}
+.weather-base.weather-icon-1066-day{background-image:url("./src/assets/weather-icons/animated/snowy-2-day.svg");}
+.weather-base.weather-icon-1069-night{background-image:url("./src/assets/weather-icons/animated/rain-and-sleet-mix.svg");}
+.weather-base.weather-icon-1069-day{background-image:url("./src/assets/weather-icons/animated/rain-and-sleet-mix.svg");}
+.weather-base.weather-icon-1072-night{background-image:url("./src/assets/weather-icons/animated/hail.svg");}
+.weather-base.weather-icon-1072-day{background-image:url("./src/assets/weather-icons/animated/hail.svg");}
+.weather-base.weather-icon-1087-night{background-image:url("./src/assets/weather-icons/animated/scattered-thunderstorms-night.svg");}
+.weather-base.weather-icon-1087-day{background-image:url("./src/assets/weather-icons/animated/scattered-thunderstorms-day.svg");}
+.weather-base.weather-icon-1114-night{background-image:url("./src/assets/weather-icons/animated/snowy-3-night.svg");}
+.weather-base.weather-icon-1114-day{background-image:url("./src/assets/weather-icons/animated/snowy-3-day.svg");}
+.weather-base.weather-icon-1117-night{background-image:url("./src/assets/weather-icons/animated/snowy-3-night.s;vg");}
+.weather-base.weather-icon-1117-day{background-image:url("./src/assets/weather-icons/animated/snowy-3-day.svg");}
+.weather-base.weather-icon-1135-night{background-image:url("./src/assets/weather-icons/animated/fog-night.svg");}
+.weather-base.weather-icon-1135-day{background-image:url("./src/assets/weather-icons/animated/fog-day.svg");}
+.weather-base.weather-icon-1147-night{background-image:url("./src/assets/weather-icons/animated/fog-night.svg");}
+.weather-base.weather-icon-1147-day{background-image:url("./src/assets/weather-icons/animated/fog-day.svg");}
+.weather-base.weather-icon-1150-night{background-image:url("./src/assets/weather-icons/animated/rainy-1-night.svg");}
+.weather-base.weather-icon-1150-day{background-image:url("./src/assets/weather-icons/animated/rainy-1-day.svg");}
+.weather-base.weather-icon-1153-night{background-image:url("./src/assets/weather-icons/animated/rainy-1-night.svg");}
+.weather-base.weather-icon-1153-day{background-image:url("./src/assets/weather-icons/animated/rainy-1-day.svg");}
+.weather-base.weather-icon-1168-night{background-image:url("./src/assets/weather-icons/animated/frost-night.svg");}
+.weather-base.weather-icon-1168-day{background-image:url("./src/assets/weather-icons/animated/frost-day.svg");}
+.weather-base.weather-icon-1171-night{background-image:url("./src/assets/weather-icons/animated/frost-night.svg");}
+.weather-base.weather-icon-1171-day{background-image:url("./src/assets/weather-icons/animated/frost-day.svg");}
+.weather-base.weather-icon-1180-night{background-image:url("./src/assets/weather-icons/animated/rainy-2-night.svg");}
+.weather-base.weather-icon-1180-day{background-image:url("./src/assets/weather-icons/animated/rainy-2-day.svg");}
+.weather-base.weather-icon-1183-night{background-image:url("./src/assets/weather-icons/animated/rainy-1-night.svg");}
+.weather-base.weather-icon-1183-day{background-image:url("./src/assets/weather-icons/animated/rainy-1-day.svg");}
+.weather-base.weather-icon-1186-night{background-image:url("./src/assets/weather-icons/animated/rainy-2-night.svg");}
+.weather-base.weather-icon-1186-day{background-image:url("./src/assets/weather-icons/animated/rainy-2-day.svg");}
+.weather-base.weather-icon-1189-night{background-image:url("./src/assets/weather-icons/animated/rainy-2-night.svg");}
+.weather-base.weather-icon-1189-day{background-image:url("./src/assets/weather-icons/animated/rainy-2-day.svg");}
+.weather-base.weather-icon-1192-night{background-image:url("./src/assets/weather-icons/animated/rainy-3-night.svg");}
+.weather-base.weather-icon-1192-day{background-image:url("./src/assets/weather-icons/animated/rainy-3-day.svg");}
+.weather-base.weather-icon-1195-night{background-image:url("./src/assets/weather-icons/animated/rainy-3-night.svg");}
+.weather-base.weather-icon-1195-day{background-image:url("./src/assets/weather-icons/animated/rainy-3-day.svg");}
+.weather-base.weather-icon-1198-night{background-image:url("./src/assets/weather-icons/animated/snow-and-sleet-mix.svg");}
+.weather-base.weather-icon-1198-day{background-image:url("./src/assets/weather-icons/animated/snow-and-sleet-mix.svg");}
+.weather-base.weather-icon-1201-night{background-image:url("./src/assets/weather-icons/animated/snow-and-sleet-mix.svg");}
+.weather-base.weather-icon-1201-day{background-image:url("./src/assets/weather-icons/animated/snow-and-sleet-mix.svg");}
+.weather-base.weather-icon-1204-night{background-image:url("./src/assets/weather-icons/animated/snow-and-sleet-mix.svg");}
+.weather-base.weather-icon-1204-day{background-image:url("./src/assets/weather-icons/animated/snow-and-sleet-mix.svg");}
+.weather-base.weather-icon-1207-night{background-image:url("./src/assets/weather-icons/animated/snow-and-sleet-mix.svg");}
+.weather-base.weather-icon-1207-day{background-image:url("./src/assets/weather-icons/animated/snow-and-sleet-mix.svg");}
+.weather-base.weather-icon-1210-night{background-image:url("./src/assets/weather-icons/animated/snowy-1-night.svg");}
+.weather-base.weather-icon-1210-day{background-image:url("./src/assets/weather-icons/animated/snowy-1-day.svg");}
+.weather-base.weather-icon-1213-night{background-image:url("./src/assets/weather-icons/animated/snowy-1-night.svg");}
+.weather-base.weather-icon-1213-day{background-image:url("./src/assets/weather-icons/animated/snowy-1-day.svg");}
+.weather-base.weather-icon-1216-night{background-image:url("./src/assets/weather-icons/animated/snowy-2-night.svg");}
+.weather-base.weather-icon-1216-day{background-image:url("./src/assets/weather-icons/animated/snowy-2-day.svg");}
+.weather-base.weather-icon-1219-night{background-image:url("./src/assets/weather-icons/animated/snowy-2-night.svg");}
+.weather-base.weather-icon-1219-day{background-image:url("./src/assets/weather-icons/animated/snowy-2-day.svg");}
+.weather-base.weather-icon-1222-night{background-image:url("./src/assets/weather-icons/animated/snowy-3-night.svg");}
+.weather-base.weather-icon-1222-day{background-image:url("./src/assets/weather-icons/animated/snowy-3-day.svg");}
+.weather-base.weather-icon-1225-night{background-image:url("./src/assets/weather-icons/animated/snowy-3-night.svg");}
+.weather-base.weather-icon-1225-day{background-image:url("./src/assets/weather-icons/animated/snowy-3-day.svg");}
+.weather-base.weather-icon-1237-night{background-image:url("./src/assets/weather-icons/animated/hail.svg");}
+.weather-base.weather-icon-1237-day{background-image:url("./src/assets/weather-icons/animated/hail.svg");}
+.weather-base.weather-icon-1240-night{background-image:url("./src/assets/weather-icons/animated/rainy-1-night.svg");}
+.weather-base.weather-icon-1240-day{background-image:url("./src/assets/weather-icons/animated/rainy-1-day.svg");}
+.weather-base.weather-icon-1243-night{background-image:url("./src/assets/weather-icons/animated/rainy-2-night.svg");}
+.weather-base.weather-icon-1243-day{background-image:url("./src/assets/weather-icons/animated/rainy-2-day.svg");}
+.weather-base.weather-icon-1246-night{background-image:url("./src/assets/weather-icons/animated/rainy-3-night.svg");}
+.weather-base.weather-icon-1246-day{background-image:url("./src/assets/weather-icons/animated/rainy-3-day.svg");}
+.weather-base.weather-icon-1249-night{background-image:url("./src/assets/weather-icons/animated/rain-and-sleet-mix.svg");}
+.weather-base.weather-icon-1249-day{background-image:url("./src/assets/weather-icons/animated/rain-and-sleet-mix.svg");}
+.weather-base.weather-icon-1252-night{background-image:url("./src/assets/weather-icons/animated/rain-and-sleet-mix.svg");}
+.weather-base.weather-icon-1252-day{background-image:url("./src/assets/weather-icons/animated/rain-and-sleet-mix.svg");}
+.weather-base.weather-icon-1255-night{background-image:url("./src/assets/weather-icons/animated/snowy-1-night.svg");}
+.weather-base.weather-icon-1255-day{background-image:url("./src/assets/weather-icons/animated/snowy-1-day.svg");}
+.weather-base.weather-icon-1258-night{background-image:url("./src/assets/weather-icons/animated/snowy-2-night.svg");}
+.weather-base.weather-icon-1258-day{background-image:url("./src/assets/weather-icons/animated/snowy-2-day.svg");}
+.weather-base.weather-icon-1261-night{background-image:url("./src/assets/weather-icons/animated/hail.svg");}
+.weather-base.weather-icon-1261-day{background-image:url("./src/assets/weather-icons/animated/hail.svg");}
+.weather-base.weather-icon-1264-night{background-image:url("./src/assets/weather-icons/animated/hail.svg");}
+.weather-base.weather-icon-1264-day{background-image:url("./src/assets/weather-icons/animated/hail.svg");}
+.weather-base.weather-icon-1273-night{background-image:url("./src/assets/weather-icons/animated/scattered-thunderstorms-night.svg");}
+.weather-base.weather-icon-1273-day{background-image:url("./src/assets/weather-icons/animated/scattered-thunderstorms-day.svg");}
+.weather-base.weather-icon-1276-night{background-image:url("./src/assets/weather-icons/animated/scattered-thunderstorms-night.svg");}
+.weather-base.weather-icon-1276-day{background-image:url("./src/assets/weather-icons/animated/scattered-thunderstorms-day.svg");}
+.weather-base.weather-icon-1279-night{background-image:url("./src/assets/weather-icons/animated/snowy-1-night.svg");}
+.weather-base.weather-icon-1279-day{background-image:url("./src/assets/weather-icons/animated/snowy-1-day.svg");}
