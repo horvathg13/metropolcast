@@ -1,5 +1,5 @@
 import i18next, {t} from "i18next";
-import {countryToAlpha2} from "country-to-iso";
+import {countryToAlpha2} from "./country-to-iso";
 
 class Helper{
     static removeAccents(str) {

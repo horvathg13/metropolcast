@@ -1,20 +1,17 @@
 <script setup>
 import { CaLocationFilled, BxSearchAlt2, AkStar, AnFilledStar, CaTemperatureHot, CdHistory} from '@kalimahapps/vue-icons';
 import Footer from './Footer.vue';
-import {computed, onMounted, ref, useTemplateRef, watch} from "vue";
-import axios from "axios";
+import {computed, onMounted, ref,  watch} from "vue";
 import ServiceClient from "../../ServiceClient.js";
-import weatherCodes from "../../public/locales/en-GB/weather_codes.json"
 import {useTranslation} from "i18next-vue";
 import i18next from "i18next";
 import Error from "@/components/Error.vue";
 import cities from '../cities.json';
 import admin1 from '../admin1.json';
 import {getBoundsOfDistance, isPointWithinRadius, orderByDistance} from "geolib";
-import {countryToAlpha2} from "country-to-iso";
+import {countryToAlpha2} from "../../country-to-iso.js";
 import Chart from "@/components/chart.vue";
 import Cookie from "@/components/Cookie.vue";
-import hunCities from "../hun_cities.json";
 import varosok from "../cities_hu.json"
 import cities_en from "../cities_en.json"
 import Helper from "../../Helper.js";

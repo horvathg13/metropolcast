@@ -9,7 +9,6 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import backend from "i18next-http-backend";
 import i18next from "i18next";
 import 'vue3-flag-icons/styles'
-import FlagIcon from "vue3-flag-icons";
 import './App.css';
 
 

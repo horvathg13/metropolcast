@@ -1,11 +1,10 @@
 <script setup>
 import FlagIcon from 'vue3-flag-icons'
-import VueSelect from "vue3-select-component";
 import {computed, onMounted, ref, watch} from "vue";
 import {useTranslation} from "i18next-vue";
 import i18next from "i18next";
-import { LaCloudSunRainSolid, FlFilledWeatherRainShowersDay, FlFilledWeatherSunnyLow } from '@kalimahapps/vue-icons';
-import { BsDot } from '@kalimahapps/vue-icons';
+
+
 /*Translation*/
 const {t} = useTranslation();
 
