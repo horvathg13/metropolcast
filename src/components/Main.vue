@@ -6,13 +6,13 @@ import ServiceClient from "../../ServiceClient.js";
 import {useTranslation} from "i18next-vue";
 import i18next from "i18next";
 import Error from "@/components/Error.vue";
-import cities from '../cities.json';
-import admin1 from '../admin1.json';
+import cities from '/public/cities.json';
+import admin1 from '/public/admin1.json';
 import {getBoundsOfDistance, isPointWithinRadius, orderByDistance} from "geolib";
 import {countryToAlpha2} from "../../country-to-iso.ts";
 import Chart from "@/components/chart.vue";
 import Cookie from "@/components/Cookie.vue";
-import varosok from "../cities_hu.json"
+import varosok from "/public/cities_hu.json"
 import cities_en from "../../public/cities_en.json"
 import Helper from "../../Helper.js";
 import  db from '@/database.js';
