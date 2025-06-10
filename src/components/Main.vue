@@ -13,7 +13,7 @@ import {countryToAlpha2} from "../../country-to-iso.ts";
 import Chart from "@/components/chart.vue";
 import Cookie from "@/components/Cookie.vue";
 import varosok from "../cities_hu.json"
-import cities_en from "../cities_en.json"
+import cities_en from "../../public/cities_en.json"
 import Helper from "../../Helper.js";
 import  db from '@/database.js';
 import Loader from "./Loader.vue"
@@ -748,7 +748,7 @@ onMounted(async () => {
             <div class="card">
               <div class="svg-container">
                 <h4>{{t('enums.flike')}}</h4>
-                <img src="/src/assets/weather-icons/animated/clear-day.svg"/>
+                <img src="/weather-icons/animated/clear-day.svg"/>
                 <h3 v-if="isCelsius">{{ new Intl.NumberFormat(i18next.language).format(weatherData?.current?.feelslike_c) }} °C</h3>
                 <h3 v-else>{{ new Intl.NumberFormat(i18next.language).format(weatherData?.current?.feelslike_f)}} °F</h3>
               </div>
@@ -756,21 +756,21 @@ onMounted(async () => {
             <div class="card">
               <div class="svg-container">
                 <h4>UV</h4>
-                <img src="/src/assets/weather-icons/animated/clear-day.svg"/>
+                <img src="/weather-icons/animated/clear-day.svg"/>
                 <h3>{{ new Intl.NumberFormat(i18next.language).format(weatherData?.current?.uv) }}</h3>
               </div>
             </div>
             <div class="card">
               <div class="svg-container">
                 <h4>{{t('enums.cloud')}}</h4>
-                <img src="/src/assets/weather-icons/animated/cloudy.svg"/>
+                <img src="/weather-icons/animated/cloudy.svg"/>
                 <h3>{{ weatherData?.current?.cloud }} %</h3>
               </div>
             </div>
             <div class="card">
               <div class="svg-container">
                 <h4>{{t('enums.percip')}}</h4>
-                <img src="/src/assets/weather-icons/animated/rainy-3.svg"/>
+                <img src="/weather-icons/animated/rainy-3.svg"/>
                 <h3 v-if="isCelsius">{{weatherData?.current?.precip_mm}} mm</h3>
                 <h3 v-else>{{weatherData?.current?.precip_in}} in</h3>
 
@@ -779,7 +779,7 @@ onMounted(async () => {
             <div class="card">
               <div class="svg-container">
                 <h4>{{t('enums.wind')}}</h4>
-                <img src="/src/assets/weather-icons/animated/wind.svg"/>
+                <img src="/weather-icons/animated/wind.svg"/>
                 <h3 v-if="isCelsius">{{weatherData?.current?.wind_kph }} km/h</h3>
                 <h3 v-else>{{weatherData?.current?.wind_mph }} m/h</h3>
               </div>
