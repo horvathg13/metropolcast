@@ -488,7 +488,6 @@ img{
     width: 55px;
     height: 26px;
 }
-
 .switch input {
     opacity: 0;
     width: 0;
@@ -522,6 +521,9 @@ img{
 input:checked + .slider {
     background-color: #2196F3;
 }
+input:checked + .slider.disabled {
+    background-color: #2d535a;
+}
 
 input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
@@ -540,6 +542,54 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+.slide {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #837e7e;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slide:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slide {
+    background-color: #2196F3;
+}
+
+input:focus + .slide {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slide:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slide.round {
+    border-radius: 34px;
+}
+
+.slide.round:before {
+    border-radius: 50%;
+}
+
+
 
 /*Error*/
 
@@ -666,7 +716,7 @@ input:checked + .slider:before {
 
 .cookie-popup{
     width: 100%;
-    height: 15%;
+    height: 20%;
     position: fixed;
     z-index: 9999;
     bottom: 0;
@@ -682,7 +732,7 @@ input:checked + .slider:before {
 }
 @media screen and (max-width: 870px) {
     .cookie-popup{
-        height: 25% !important;
+        height: 35% !important;
         text-align: center;
     }
     .cookie-popup .cookie-content-main{
@@ -696,6 +746,9 @@ input:checked + .slider:before {
         min-width: 350px;
         height: fit-content;
         margin-bottom: 20px !important;
+    }
+    .cookie-popup .cookie-content .switch-box-main{
+        justify-content: center;
     }
     .cookie-popup .cookie-content-main .cookie-action-container{
         width: 90% !important;
@@ -724,6 +777,22 @@ input:checked + .slider:before {
     height: 98%;
     overflow-y: auto;
 }
+.cookie-popup .cookie-content .switch-box-main{
+    height: fit-content;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+
+}
+.cookie-popup .cookie-content .switch-box-main .switch-box{
+    margin:10px 0;
+}
+.cookie-popup .cookie-content .switch-box-main .switch-box label{
+    margin-right: 10px;
+}
+
+
+
 .cookie-popup .cookie-content-main .cookie-action-container{
     width: 30%;
     padding: 0 25px;
@@ -920,3 +989,5 @@ input:checked + .slider:before {
 .weather-base.weather-icon-1276-day{background-image:url("/metropolcast/weather-icons/animated/scattered-thunderstorms-day.svg");}
 .weather-base.weather-icon-1279-night{background-image:url("/metropolcast/weather-icons/animated/snowy-1-night.svg");}
 .weather-base.weather-icon-1279-day{background-image:url("/metropolcast/weather-icons/animated/snowy-1-day.svg");}
+
+
