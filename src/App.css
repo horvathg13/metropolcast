@@ -358,6 +358,8 @@ input:focus-visible {
 }
 .card-container .card.clickable{
     cursor: pointer;
+    border: 2px solid #6f8891;
+    box-shadow: 3px 1px 4px rgba(10, 17, 21, 0.8);
 }
 .card-container .card h4{
     overflow: hidden;
