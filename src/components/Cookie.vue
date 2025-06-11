@@ -2,8 +2,13 @@
 
 import {use} from "i18next";
 import {useTranslation} from "i18next-vue";
-
+import {addGtag, useConsent} from "vue-gtag";
+import {computed, onMounted, ref,  watch} from "vue";
+const { acceptAll, rejectAll } = useConsent();
 const {t}=useTranslation();
+
+let functionCookie=ref(true);
+let analyticalCookie=ref(true);
 
 </script>
 
@@ -12,10 +17,29 @@ const {t}=useTranslation();
     <div class="cookie-content-main">
       <div class="cookie-content">
         <h3>{{t('cookies.info')}}</h3>
+        <div class="switch-box-main">
+
+          <div class="switch-box">
+            <label>{{ t('cookies.functional') }}</label>
+            <label class="switch">
+              <input type="checkbox" v-model="functionCookie" disabled> >
+              <span class="slider disabled round"></span>
+            </label>
+          </div>
+
+          <div class="switch-box">
+            <label for="analytic-box">{{ t('cookies.analytical') }}</label>
+            <label class="switch">
+              <input id="analytic-box" type="checkbox" v-model="analyticalCookie" >
+              <span class="slide round"></span>
+            </label>
+          </div>
+
+        </div>
       </div>
       <div class="cookie-action-container">
-        <button class="cookie-button" type="button" @click="$emit('close', true)">{{t('cookies.accept')}}</button>
-        <button class="cookie-button reject" type="button" @click="$emit('close', false)">{{t('cookies.reject')}}</button>
+        <button class="cookie-button" type="button" @click="$emit('close',{functionality: true, analytical: analyticalCookie})">{{t('cookies.accept')}}</button>
+        <button class="cookie-button reject" type="button" @click="$emit('close',{functionality: true, analytical: false})">{{t('cookies.reject')}}</button>
       </div>
     </div>
   </div>
