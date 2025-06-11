@@ -14,6 +14,16 @@ import './App.css';
 
 const lng = localStorage.getItem('i18nextLng');
 
+import { configure  } from "vue-gtag";
+
+configure({
+    tagId: 'G-161P1JZCGY',
+    initMode: 'manual',
+    config:{
+        'cookie_expires': 24 * 60 * 60
+    }
+})
+
 i18next
     .use(LanguageDetector)
     .use(backend)
