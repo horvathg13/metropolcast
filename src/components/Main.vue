@@ -672,7 +672,7 @@ onMounted(async () => {
             <div class="card">
               <div class="svg-container">
                 <h4>{{t('enums.flike')}}</h4>
-                <img src="/weather-icons/animated/clear-day.svg"/>
+                <div class="weather-base mini weather-icon-1000-day"></div>
                 <h3 v-if="isCelsius">{{ new Intl.NumberFormat(i18next.language).format(weatherData?.current?.feelslike_c) }} °C</h3>
                 <h3 v-else>{{ new Intl.NumberFormat(i18next.language).format(weatherData?.current?.feelslike_f)}} °F</h3>
               </div>
@@ -680,21 +680,21 @@ onMounted(async () => {
             <div class="card">
               <div class="svg-container">
                 <h4>UV</h4>
-                <img src="/weather-icons/animated/clear-day.svg"/>
+                <div class="weather-base mini weather-icon-1000-day"></div>
                 <h3>{{ new Intl.NumberFormat(i18next.language).format(weatherData?.current?.uv) }}</h3>
               </div>
             </div>
             <div class="card">
               <div class="svg-container">
                 <h4>{{t('enums.cloud')}}</h4>
-                <img src="/weather-icons/animated/cloudy.svg"/>
+                <div class="weather-base mini weather-icon-1009-night"></div>
                 <h3>{{ weatherData?.current?.cloud }} %</h3>
               </div>
             </div>
             <div class="card">
               <div class="svg-container">
                 <h4>{{t('enums.percip')}}</h4>
-                <img src="/weather-icons/animated/rainy-3.svg"/>
+                <div class="weather-base mini weather-icon-rainy-no-code"></div>
                 <h3 v-if="isCelsius">{{weatherData?.current?.precip_mm}} mm</h3>
                 <h3 v-else>{{weatherData?.current?.precip_in}} in</h3>
 
@@ -703,7 +703,7 @@ onMounted(async () => {
             <div class="card">
               <div class="svg-container">
                 <h4>{{t('enums.wind')}}</h4>
-                <img src="/weather-icons/animated/wind.svg"/>
+                <div class="weather-base mini weather-icon-wind-no-code"></div>
                 <h3 v-if="isCelsius">{{weatherData?.current?.wind_kph }} km/h</h3>
                 <h3 v-else>{{weatherData?.current?.wind_mph }} m/h</h3>
               </div>
