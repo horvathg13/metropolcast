@@ -9,8 +9,7 @@ const props = defineProps(["error"])
   <div class="main-container search">
     <div class="error-main-container">
       <div class="error-message-container">
-        {{props?.error?.error?.error?.code}}
-        <h3>{{ t(`app-error.${props?.error?.error?.code}`)}}</h3>
+        <h3>{{ t(`app-error.${props?.error?.code}`)}}</h3>
       </div>
       <div class="img-container">
         <img src="/src/assets/error-img.png" alt="error">
