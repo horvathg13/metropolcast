@@ -17,9 +17,11 @@
     "loading": "Data is loading..."
   },
   "cookies": {
-    "info": "This website only use statistical, analytical cookies. Please accept.",
+    "info": "This website use functional and analytical cookies.",
     "accept": "Accept",
-    "reject": "Reject"
+    "reject": "Reject",
+    "functional": "Functional cookies",
+    "analytical": "Analytical cookies"
   },
   "chart": {
     "t": "time",

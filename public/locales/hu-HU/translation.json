@@ -29,9 +29,11 @@
     "forecast": "Előrejelzés"
   },
   "cookies": {
-    "info": "A weboldal kizárólag statisztikai, analitikai sütit használ. Kérel fogadd el.",
+    "info": "A weboldal funkcionális és analitikai sütiket használ.",
     "accept": "Elfogad",
-    "reject": "Elutasít"
+    "reject": "Elutasít",
+    "functional": "Funkcionális sütik",
+    "analytical": "Analitikai sütik"
   },
   "app-error": {
     "1002": "Az API-kulcs megadása kötelező.",
