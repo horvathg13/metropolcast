@@ -262,12 +262,12 @@ function setCookie(userConsent) {
       analytics_storage: "granted"
     })
     localStorage.setItem('cookie', 'all')
-    localStorage.setItem('cookie_consent', JSON.stringify({
+    /*localStorage.setItem('cookie_consent', JSON.stringify({
       ad_user_data: "granted",
       ad_personalization: "denied",
       ad_storage: "denied",
       analytics_storage: "granted"
-    }));
+    }));*/
 
     addGtag()
   }
@@ -279,16 +279,18 @@ function setCookie(userConsent) {
       analytics_storage: "denied"
     })
     localStorage.setItem('cookie', 'onlyFunctional')
-    localStorage.setItem('cookie_consent', JSON.stringify({
+    /*localStorage.setItem('cookie_consent', JSON.stringify({
       ad_user_data: "granted",
       ad_personalization: "denied",
       ad_storage: "denied",
       analytics_storage: "denied"
-    }));
+    }));*/
 
     addGtag()
   }
-  return window.location.reload()
+  setTimeout(()=>{
+    window.location.reload()
+  },850)
 }
 function clickAway(){
   options.value=[];
