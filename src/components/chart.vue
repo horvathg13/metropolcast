@@ -238,7 +238,7 @@ Chart.register(...registerables);
   <div class="popup" @click="$emit('closeModal')">
     <div class="popup-content" @click="(e)=>e.stopPropagation()">
       <div class="popup-header">
-        <h1>{{ t('forecast') }}: {{ props.date }}</h1>
+        <h1>{{ props.date }}</h1>
         <AnOutlinedCloseSquare class="small-icon red" @click="$emit('closeModal')"/>
       </div>
       <div class="charts">
