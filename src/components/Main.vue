@@ -182,7 +182,6 @@ function findOriginalName(geonameid){
 
 function selectOption(e){
   options.value=[];
-  //searchValue.value=[findOriginalName(e.geonameid),e.countryCode];
   searchHelper(e.geonameid, null, e.countryCode, e.state);
 }
 
@@ -193,18 +192,23 @@ function selectFavorite(e){
     return searchHelper(e.geonameid, null, e.countryCode, state)
   }
 
-  return ServiceClient.getForecast([e.name, countryToAlpha2(e.country)]).then((success)=>{
-    prevSelected.value = success.location.name
-    weatherData.value = success;
-    searchValue.value= '';
-    findNearestCities();
-    if(!Object.keys(success.current).length){
-      serverError.value={ "error":  { "code": 0 } }
-    }
-  }).catch(error=>{
-    serverError.value=error?.response?.data;
-    searchValue.value= '';
-  });
+  return[
+      loader.value=true,
+      ServiceClient.getForecast([e.name, countryToAlpha2(e.country)]).then((success)=>{
+        prevSelected.value = success.location.name
+        weatherData.value = success;
+        searchValue.value= '';
+        findNearestCities();
+        if(!Object.keys(success.current).length){
+          serverError.value={ "error":  { "code": 0 } }
+        }
+        loader.value=false
+      }).catch(error=>{
+        serverError.value=error?.response?.data;
+        searchValue.value= '';
+        loader.value=false
+      })
+  ]
 }
 
 async function saveCityData(e){
@@ -389,10 +393,11 @@ async function filterCities(filterCitiesEn){
   let citiesFromDB = await db.cities
       .where('geonameid')
       .anyOf(filterCitiesEn)
+      .limit(20)
       .toArray();
   let citiesFilter = citiesFromDB
       .sort((a, b) => b.population - a.population)
-      .slice(0, 19);
+
   return options.value = citiesFilter.map(e => ({
     geonameid: e.geonameid,
     name: getCityName(e.geonameid),
@@ -400,7 +405,6 @@ async function filterCities(filterCitiesEn){
     country: Helper.getCountryNameFromISO(e.countryCode),
     countryCode: e.countryCode,
     admin1: e.admin1,
-
   }));
 }
 
@@ -412,10 +416,10 @@ watch(searchValue,(newValue) => {
   timeout.value= setTimeout(()=>{
     selectedItem.value=-1;
 
-    if(newValue !== ''){
+    if(newValue !== '' && newValue.length >= 3){
 
       if(Helper.getUserLanguage() === 'hu'){
-        let filterVarosok = varosok.filter(e => e.alternate_name.match(new RegExp(newValue, "i"))).map(e => e.geonameid);
+        let filterVarosok = varosok .filter(e => e.alternate_name.toLowerCase().includes(newValue.toLowerCase())).map(e => e.geonameid).slice(0,20);
         filterCities(filterVarosok)
       }
       if(Helper.getUserLanguage() === 'en'){
@@ -544,7 +548,11 @@ function generateChartData(date, hour){
     }
     generatedChartTempData.value = final;
 
-    if(windData(hour) === true && rainData(hour) === true && snowData(hour) === true){
+    generatedChartWindData.value = ChartHelper.windData(hour, isCelsius);
+    generatedChartRainData.value = ChartHelper.rainData(hour, isCelsius);
+    generatedChartSnowData.value = ChartHelper.snowData(hour);
+
+    if(generatedChartWindData.value && generatedChartRainData.value && generatedChartSnowData.value){
       selectedForeCastDate.value=date;
       return showChart.value = true;
     }
@@ -552,135 +560,14 @@ function generateChartData(date, hour){
   }
   return [];
 }
-function windData(hour){
-  if(hour.length){
-    let finalLocalTime=[];
-    let getWind=[];
-
-    hour.map(e=>{
-      finalLocalTime.push(e.time.split(" ")[1]);
-      getWind.push(isCelsius ? e.wind_kph : e.wind.mph);
-    })
-
-    let final= {
-      labels: finalLocalTime,
-      datasets: [{
-        data:getWind,
-        fill: true,
-        borderColor: 'rgb(75, 192, 192)',
-        tension: 0.1,
-        pointBackgroundColor:'rgb(11,30,30)',
-        showLine:true,
-      }],
-    }
-    generatedChartWindData.value = final;
-    return true;
-  }
-  return false;
-}
-function rainData(hour){
-  if(hour.length){
-    let finalLocalTime=[];
-    let getRain=[];
-    let getChance=[];
-
-    hour.map(e=>{
-      finalLocalTime.push(e.time.split(" ")[1]);
-      getRain.push(isCelsius ? e.precip_mm : e.precip_in);
-      getChance.push(e.chance_of_rain);
-    })
-
-    let final= {
-      labels: finalLocalTime,
-      datasets: [
-        {
-          data:getRain,
-          type:"bar",
-          fill: true,
-          tension: 0.1,
-          pointBackgroundColor:'rgb(11,30,30)',
-          showLine:true,
-          label:isCelsius ? t('chart.rain-mm') : t('chart.rain-in'),
-          yAxisID: 'y1',
-          borderWidth: 1,
-          backgroundColor:'rgb(75, 192, 192)'
-        },
-        {
-          data:getChance,
-          type:"line",
-          fill: false,
-          borderColor: 'rgb(239,95,194)',
-          tension: 0.5,
-          pointBackgroundColor:'rgb(11,30,30)',
-          showLine:true,
-          label:t('chart.chance'),
-          yAxisID: 'y2'
-        },
-
-      ],
-    }
-    generatedChartRainData.value = final;
-    return true;
-  }
-  return false;
-}
-function snowData(hour){
-  if(hour.length){
-    let finalLocalTime=[];
-    let getSnow=[];
-    let getChance=[];
-
-    hour.map(e=>{
-      finalLocalTime.push(e.time.split(" ")[1]);
-      getSnow.push(e.snow_cm);
-      getChance.push(e.chance_of_snow);
-    })
-
-    let final= {
-      labels: finalLocalTime,
-      datasets: [
-        {
-          data:getSnow,
-          type:"bar",
-          fill: true,
-          tension: 0.1,
-          pointBackgroundColor:'rgb(11,30,30)',
-          showLine:true,
-          label:t('chart.snow-mm'),
-          yAxisID: 'y1',
-          borderWidth: 1,
-          backgroundColor:'rgb(75, 192, 192)'
-        },
-        {
-          data:getChance,
-          type:"line",
-          fill: false,
-          borderColor: 'rgb(239,95,194)',
-          tension: 0.5,
-          pointBackgroundColor:'rgb(11,30,30)',
-          showLine:true,
-          label:t('chart.chance'),
-          yAxisID: 'y2'
-        },
-      ],
-    }
-    generatedChartSnowData.value = final;
-    return true;
-  }
-  return false;
-}
 function close(){
   showChart.value=false;
 }
-function closeCookies(data){
-  cookies.value=false;
-}
-
 async function loadCitiesJson() {
   const count = await db.cities.count();
   if (count > 0) return;
 
-  const response = await fetch('src/cities.json');
+  const response = await fetch('/metropolcast/cities.json');
   const cities = await response.json();
 
   await db.cities.bulkAdd(cities);
