@@ -421,12 +421,12 @@ watch(searchValue,(newValue) => {
     if(newValue !== '' && newValue.length >= 3){
 
       if(Helper.getUserLanguage() === 'hu'){
-        let filterVarosok = varosok .filter(e => e.alternate_name.toLowerCase().includes(newValue.toLowerCase())).map(e => e.geonameid).slice(0,20);
+        let filterVarosok = varosok.filter(e => e.alternate_name.toLowerCase().includes(newValue.toLowerCase())).map(e => e.geonameid).slice(0,20);
         filterCities(filterVarosok)
       }
       if(Helper.getUserLanguage() === 'en'){
 
-        let filterCitiesEn = cities_en.filter(e => e.alternate_name.match(new RegExp(newValue, "i"))).map(e => e.geonameid);
+        let filterCitiesEn = cities_en.filter(e => e.alternate_name.toLowerCase().includes(newValue.toLowerCase())).map(e => e.geonameid).slice(0,20);
         filterCities(filterCitiesEn)
       }
     }else{
