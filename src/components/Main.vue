@@ -71,12 +71,12 @@ async function searchHelper(geonameId, country=null, countryCode, state){
     findNearestCities();
     loader.value=false;
     if(!Object.keys(success.current).length){
-      serverError.value={ "error":  { "code": 0 } }
+      serverError.value={"code": 0 }
     }
 
   }catch(error){
     loader.value=false;
-    serverError.value=error;
+    serverError.value=error.response.data.error;
     searchValue.value= '';
   }
 }
@@ -106,12 +106,12 @@ async function search(){
       findNearestCities();
       loader.value=false;
       if(!Object.keys(success.current).length){
-        serverError.value={ "error":  { "code": 0 } }
+        serverError.value={"code": 0 }
       }
 
     }catch(error){
       loader.value=false;
-      serverError.value=error;
+      serverError.value=error.response.data.error;
       searchValue.value= '';
     };
   }
@@ -200,7 +200,7 @@ function selectFavorite(e){
         searchValue.value= '';
         findNearestCities();
         if(!Object.keys(success.current).length){
-          serverError.value={ "error":  { "code": 0 } }
+          serverError.value={ "code": 0 }
         }
         loader.value=false
       }).catch(error=>{
@@ -318,7 +318,7 @@ async function callWeatherByIP(){
     loader.value=false;
   }catch(error){
     loader.value=false;
-    serverError.value=error
+    serverError.value=error.response.data.error
   }
 }
 
