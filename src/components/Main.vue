@@ -17,6 +17,10 @@ import cities_en from "../../public/cities_en.json"
 import Helper from "../../Helper.js";
 import  db from '@/database.js';
 import Loader from "./Loader.vue"
+import ChartHelper from "/ChartHelper.js";
+
+import { useConsent, addGtag, consent,consentGrantedAll, consentDeniedAll, event  } from "vue-gtag";
+const { acceptAll, rejectAll, hasConsent } = useConsent();
 
 /*data*/
 let searchValue=ref('');
@@ -245,11 +249,42 @@ function isCookies(){
   return cookies.value=true;
 }
 
-function setCookie(data){
-  if(cookies.value === true){
-    localStorage.setItem('cookies', JSON.stringify(data));
-    return cookies.value=false;
+function setCookie(userConsent) {
+  if (userConsent.functionality === true && userConsent.analytical === true) {
+    consent({
+      ad_user_data: "granted",
+      ad_personalization: "denied",
+      ad_storage: "denied",
+      analytics_storage: "granted"
+    })
+    localStorage.setItem('cookie', 'all')
+    localStorage.setItem('cookie_consent', JSON.stringify({
+      ad_user_data: "granted",
+      ad_personalization: "denied",
+      ad_storage: "denied",
+      analytics_storage: "granted"
+    }));
+
+    addGtag()
   }
+  if (userConsent.functionality === true && userConsent.analytical === false) {
+    consent({
+      ad_user_data: "granted",
+      ad_personalization: "denied",
+      ad_storage: "denied",
+      analytics_storage: "denied"
+    })
+    localStorage.setItem('cookie', 'onlyFunctional')
+    localStorage.setItem('cookie_consent', JSON.stringify({
+      ad_user_data: "granted",
+      ad_personalization: "denied",
+      ad_storage: "denied",
+      analytics_storage: "denied"
+    }));
+
+    addGtag()
+  }
+  return window.location.reload()
 }
 function clickAway(){
   options.value=[];
@@ -806,9 +841,8 @@ onMounted(async () => {
         </div>
       </div>
     </div>
-    <div v-if="cookies">
-      <Cookie @close="(data)=>setCookie(data)"/>
-    </div>
+    <div v-if="!hasConsent">
+      <Cookie @close="(data)=>setCookie(data)"/>    </div>
     <div v-if="Object.keys(serverError).length > 0">
       <Error :error="serverError"/>
     </div>
