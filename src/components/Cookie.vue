@@ -38,8 +38,7 @@ let analyticalCookie=ref(true);
         </div>
       </div>
       <div class="cookie-action-container">
-        <button class="cookie-button" type="button" @click="$emit('close',{functionality: true, analytical: analyticalCookie})">{{t('cookies.accept')}}</button>
-        <button class="cookie-button reject" type="button" @click="$emit('close',{functionality: true, analytical: false})">{{t('cookies.reject')}}</button>
+        <button class="cookie-button" type="button" @click="$emit('close',{functionality: true, analytical: analyticalCookie})">{{t('cookies.understand')}}</button>
       </div>
     </div>
   </div>
