@@ -418,7 +418,7 @@ watch(searchValue,(newValue) => {
   timeout.value= setTimeout(()=>{
     selectedItem.value=-1;
 
-    if(newValue !== '' && newValue.length >= 3){
+    if(newValue !== ''){
 
       if(Helper.getUserLanguage() === 'hu'){
         let filterVarosok = varosok.filter(e => e.alternate_name.toLowerCase().includes(newValue.toLowerCase())).map(e => e.geonameid).slice(0,20);
