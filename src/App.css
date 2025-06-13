@@ -744,7 +744,7 @@ input:checked + .slide:before {
         align-items: center;
     }
     .cookie-popup .cookie-content-main .cookie-content{
-        width: 90% !important;
+        width: 100% !important;
         min-width: 350px;
         height: fit-content;
         margin-bottom: 20px !important;
@@ -753,7 +753,7 @@ input:checked + .slide:before {
         justify-content: center;
     }
     .cookie-popup .cookie-content-main .cookie-action-container{
-        width: 90% !important;
+        width: 100% !important;
         min-width: 350px !important;
         padding: 0 !important;
         margin: 0 auto;
@@ -767,9 +767,6 @@ input:checked + .slide:before {
     }
 }
 @media screen and (max-width: 500px) {
-    .cookie-popup{
-        text-align: left;
-    }
     .cookie-popup .cookie-content-main .cookie-action-container{
         margin: 0 !important;
     }
@@ -777,7 +774,6 @@ input:checked + .slide:before {
 .cookie-popup .cookie-content{
     width: 70%;
     height: 98%;
-    overflow-y: auto;
 }
 .cookie-popup .cookie-content .switch-box-main{
     height: fit-content;
