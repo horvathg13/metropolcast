@@ -730,8 +730,9 @@ onMounted(async () => {
         </div>
       </div>
     </div>
-    <div v-if="!hasConsent">
-      <Cookie @close="(data)=>setCookie(data)"/>    </div>
+    <!--<div v-if="!hasConsent">
+      <Cookie @close="(data)=>setCookie(data)"/>
+    </div>-->
     <div v-if="Object.keys(serverError).length > 0">
       <Error :error="serverError"/>
     </div>
