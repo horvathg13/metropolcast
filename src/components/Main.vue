@@ -337,7 +337,7 @@ function findNearestCities() {
 
     nearestCities.value = orderByDistance({latitude: weatherData.value.location.lat, longitude: weatherData.value.location.lon}, findCities)
         .map(e=>({geonameid: e.geonameid, name: getCityName(e.geonameid, e.name), state: getAdmin1Data(e.countryCode, e.admin1), country: Helper.getCountryNameFromISO(e.countryCode), countryCode:e.countryCode}))
-        .slice(0,11);
+        .slice(1,11);
 
   }
 }
