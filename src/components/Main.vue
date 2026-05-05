@@ -19,8 +19,8 @@ import  db from '@/database.js';
 import Loader from "./Loader.vue"
 import ChartHelper from "/ChartHelper.js";
 
-import { useConsent, addGtag, consent,consentGrantedAll, consentDeniedAll, event  } from "vue-gtag";
-const { acceptAll, rejectAll, hasConsent } = useConsent();
+import {useConsent, addGtag, consent,consentGrantedAll, consentDeniedAll, event} from "vue-gtag";
+const { acceptAll, rejectAll } = useConsent();
 
 /*data*/
 let searchValue=ref('');
@@ -42,8 +42,7 @@ let selectedForeCastDate=ref();
 let cookies=ref();
 let prevSelected=ref();
 let loader=ref();
-
-
+const hasConsent = ref(!!localStorage.getItem('cookie'))
 /*i18next*/
 let currentLanguage = ref(i18next.language);
 i18next.on('languageChanged', (lng) => {
@@ -262,12 +261,6 @@ function setCookie(userConsent) {
       analytics_storage: "granted"
     })
     localStorage.setItem('cookie', 'all')
-    /*localStorage.setItem('cookie_consent', JSON.stringify({
-      ad_user_data: "granted",
-      ad_personalization: "denied",
-      ad_storage: "denied",
-      analytics_storage: "granted"
-    }));*/
 
     addGtag()
   }
@@ -279,18 +272,18 @@ function setCookie(userConsent) {
       analytics_storage: "denied"
     })
     localStorage.setItem('cookie', 'onlyFunctional')
-    /*localStorage.setItem('cookie_consent', JSON.stringify({
-      ad_user_data: "granted",
-      ad_personalization: "denied",
-      ad_storage: "denied",
-      analytics_storage: "denied"
-    }));*/
 
     addGtag()
   }
-  setTimeout(()=>{
-    window.location.reload()
-  },850)
+
+  event('page_view', {
+    page_path: window.location.pathname,
+    page_location: window.location.href,
+    page_title: document.title
+  })
+
+  hasConsent.value = true
+
 }
 function clickAway(){
   options.value=[];
@@ -730,9 +723,9 @@ onMounted(async () => {
         </div>
       </div>
     </div>
-    <!--<div v-if="!hasConsent">
+    <div v-if="!hasConsent">
       <Cookie @close="(data)=>setCookie(data)"/>
-    </div>-->
+    </div>
     <div v-if="Object.keys(serverError).length > 0">
       <Error :error="serverError"/>
     </div>
