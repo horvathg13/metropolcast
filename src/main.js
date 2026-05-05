@@ -1,20 +1,18 @@
 import './assets/main.css'
 import App from './App.vue'
 import {router} from "../App.js";
-
-import {createApp, watch} from 'vue';
-
+import {createApp} from 'vue';
 import I18NextVue from "i18next-vue";
 import LanguageDetector from "i18next-browser-languagedetector";
 import backend from "i18next-http-backend";
 import i18next from "i18next";
 import 'vue3-flag-icons/styles'
 import './App.css';
+import {configure, createGtag} from "vue-gtag";
 
 
 const lng = localStorage.getItem('i18nextLng');
 
-import { configure  } from "vue-gtag";
 
 configure({
     tagId: 'G-161P1JZCGY',
@@ -22,6 +20,10 @@ configure({
     config:{
         'cookie_expires': 24 * 60 * 60
     }
+})
+
+const gtag = createGtag({
+    tagId: "G-161P1JZCGY"
 })
 
 i18next
@@ -39,7 +41,8 @@ i18next
     })
 
 const app = createApp(App)
-
 app.use(I18NextVue, { i18next })
     .use(router)
+    .use(gtag)
+
 app.mount('#app')
